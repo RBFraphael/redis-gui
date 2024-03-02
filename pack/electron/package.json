@@ -1,20 +1,20 @@
 {
-  "name": "another-redis-desktop-manager",
+  "name": "redis-gui",
   "version": "1.6.3",
   "description": "A faster, better and more stable redis desktop manager.",
-  "author": "Another",
+  "author": "RBFraphael",
   "private": true,
   "main": "electron-main.js",
   "dependencies": {
     "electron-updater": "4.6.5",
     "font-list": "^1.4.5"
   },
-  "repository": "github:qishibo/AnotherRedisDesktopManager",
+  "repository": "github:rbfraphael/redis-gui",
   "build": {
-    "appId": "me.qii404.another-redis-desktop-manager",
-    "productName": "Another Redis Desktop Manager",
-    "artifactName": "${productName}.${version}.${ext}",
-    "copyright": "Copyright © 2024 qii404",
+    "appId": "io.github.rbfraphael.redis-gui",
+    "productName": "Redis GUI",
+    "artifactName": "${name}.${version}.${ext}",
+    "copyright": "Copyright © 2024 RBFraphael",
     "asar": true,
     "directories": {
       "output": "build-apps",
@@ -28,42 +28,15 @@
     ],
     "publish": [{
       "provider": "github",
-      "owner": "qishibo",
-      "repo": "AnotherRedisDesktopManager",
+      "owner": "rbfraphael",
+      "repo": "redis-gui",
       "releaseType": "prerelease"
     }],
     "win": {
       "icon": "icons/icon.ico",
       "target": [
-        "nsis"
+        "dir"
       ]
-    },
-    "nsis": {
-      "allowToChangeInstallationDirectory": true,
-      "oneClick": false,
-      "menuCategory": true,
-      "allowElevation": true
-    },
-    "linux": {
-      "icon": "icons/icon.png",
-      "category": "Utility",
-      "target": [
-        "AppImage"
-      ]
-    },
-    "snap": {
-      "plugs": ["default", "ssh-keys"]
-    },
-    "mac": {
-      "icon": "icons/icon.icns",
-      "type": "development",
-      "category": "public.app-category.developer-tools",
-      "target": [
-        "dmg"
-      ],
-      "extendInfo": {
-        "ElectronTeamID": "68JN8DV835"
-      }
     }
   }
 }
